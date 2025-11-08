@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "demo@NexoVate.com",
+      "password": "password123",
+      "name": "Demo User",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=demo",
+      "bio": "Lifelong learner passionate about web development",
+      "enrolledCourses": [1, 2],
+      "favorites": [3, 5]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Web Development Fundamentals",
+      "slug": "web-dev-fundamentals",
+      "instructor": {
+        "id": 1,
+        "name": "Code Traversal",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=sarah"
+      },
+      "description": "Learn the basics of HTML, CSS, and JavaScript to build responsive web applications.",
+      "image": "https://img.youtube.com/vi/EDJ9YbHXRZA/hqdefault.jpg",
+      "category": "Web Development",
+      "level": "Beginner",
+      "duration": "40 hours",
+      "students": 12847,
+      "rating": 4.8,
+      "reviewCount": 2341,
+      "price": 0,
+      "isFree": true,
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Introduction to HTML",
+          "type": "video",
+          "duration": "11 min",
+          "videoUrl": "https://www.youtube.com/embed/EDJ9YbHXRZA",
+          "completed": false
+        },
+        {
+          "id": 2,
+          "title": "CSS Styling Basics",
+          "type": "video",
+          "duration": "10 min",
+          "videoUrl": "https://www.youtube.com/embed/2sgZmEw5nis",
+          "completed": false
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "author": "John Doe",
+          "rating": 5,
+          "text": "Excellent course! Very clear explanations.",
+          "date": "2024-10-15"
+        },
+        {
+          "id": 2,
+          "author": "Jane Smith",
+          "rating": 4,
+          "text": "Great content and well-structured. Some topics could use more depth.",
+          "date": "2024-10-12"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "React Advanced Patterns",
+      "slug": "react-advanced",
+      "instructor": {
+        "id": 2,
+        "name": "HuXn WebDev",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=mike"
+      },
+      "description": "Master advanced React patterns including hooks, context API, and performance optimization.",
+      "image": "https://img.youtube.com/vi/-Qnf2bME-rE/hqdefault.jpg",
+      "category": "Programming",
+      "level": "Advanced",
+      "duration": "10 hours",
+      "students": 8234,
+      "rating": 4.9,
+      "reviewCount": 1829,
+      "price": 99.99,
+      "isFree": false,
+      "lessons": [
+        {
+          "id": 1,
+          "title": "React Hooks Deep Dive",
+          "type": "video",
+          "duration": "10 hrs",
+          "videoUrl": "https://www.youtube.com/embed/-Qnf2bME-rE",
+          "completed": false
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "author": "Alex Rodriguez",
+          "rating": 5,
+          "text": "Outstanding course! Learned so much about React patterns.",
+          "date": "2024-10-10"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Design Masterclass",
+      "slug": "ux-design-masterclass",
+      "instructor": {
+        "id": 3,
+        "name": "Intellipaat",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=emma"
+      },
+      "description": "Create beautiful, user-centered designs with Figma and industry best practices.",
+      "image": "https://img.youtube.com/vi/MBblN98-5lg/hqdefault.jpg",
+      "category": "Design",
+      "level": "Intermediate",
+      "duration": "11 hours",
+      "students": 15234,
+      "rating": 4.7,
+      "reviewCount": 2156,
+      "price": 69.99,
+      "isFree": false,
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Design Principles",
+          "type": "video",
+          "duration": "10 hrs",
+          "videoUrl": "https://www.youtube.com/embed/MBblN98-5lg",
+          "completed": false
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "author": "Maria Garcia",
+          "rating": 5,
+          "text": "Fantastic course! Great balance of theory and practical exercises.",
+          "date": "2024-10-08"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Python for Data Science",
+      "slug": "python-data-science",
+      "instructor": {
+        "id": 4,
+        "name": "Intellipaat",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=alex"
+      },
+      "description": "Learn Python and data analysis tools to extract insights from data.",
+      "image": "https://img.youtube.com/vi/esPfw_wya6E/hqdefault.jpg",
+      "category": "Programming",
+      "level": "Beginner",
+      "duration": "12 hours",
+      "students": 10234,
+      "rating": 4.6,
+      "reviewCount": 1523,
+      "price": 0,
+      "isFree": true,
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Data Science with Python",
+          "type": "video",
+          "duration": "12 hrs",
+          "videoUrl": "https://www.youtube.com/embed/esPfw_wya6E",
+          "completed": false
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "author": "Anita Sharma",
+          "rating": 5,
+          "text": "Fantastic course! Great balance of theory and practical exercises.",
+          "date": "2024-10-08"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Mobile App Development",
+      "slug": "mobile-app-dev",
+      "instructor": {
+        "id": 5,
+        "name": "Saumya Singh",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=david"
+      },
+      "description": "Build native iOS and Android apps with React Native and Flutter.",
+      "image": "https://img.youtube.com/vi/NMOdEHyMXBo/hqdefault.jpg",
+      "category": "Programming",
+      "level": "Advanced",
+      "duration": "19 hours",
+      "students": 7654,
+      "rating": 4.8,
+      "reviewCount": 1876,
+      "price": 89.99,
+      "isFree": false,
+      "lessons": [{
+          "id": 1,
+          "title": "Android App Development Full Course with PRACTICAL",
+          "type": "video",
+          "duration": "19 hrs",
+          "videoUrl": "https://www.youtube.com/embed/NMOdEHyMXBo",
+          "completed": false
+        }],
+      "reviews": [{
+          "id": 1,
+          "author": "Akash Kumar",
+          "rating": 5,
+          "text": "Fantastic course! Great balance of theory and practical exercises.",
+          "date": "2024-10-08"
+        }]
+    },
+    {
+      "id": 6,
+      "title": "Node.js & Express from Scratch",
+      "slug": "nodejs-express-scratch",
+      "instructor": {
+        "id": 6,
+        "name": "Dipesh Malvia",
+        "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=rohan"
+      },
+      "description": "Build backend servers and RESTful APIs using Node.js and Express.",
+      "image": "https://img.youtube.com/vi/ekRpc5YgVZU/hqdefault.jpg",
+      "category": "Programming",
+      "level": "Intermediate",
+      "duration": "6 hours",
+      "students": 6543,
+      "rating": 4.6,
+      "reviewCount": 842,
+      "price": 49.99,
+      "isFree": false,
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Environment & Setup",
+          "type": "video",
+          "duration": "6 hrs",
+          "videoUrl": "https://www.youtube.com/embed/ekRpc5YgVZU",
+          "completed": false
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "author": "Rina Patel",
+          "rating": 5,
+          "text": "Very practical and hands-on.",
+          "date": "2024-11-01"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "Web Development",
+    "Programming",
+    "Design"
+  ],
+  "levels": ["Beginner", "Intermediate", "Advanced"]
+}
