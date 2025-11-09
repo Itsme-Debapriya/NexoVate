@@ -89,7 +89,7 @@ export default function SignUpPage() {
       <Navigation />
 
       <div className="max-w-md w-full mx-auto px-4 py-12">
-        <div className="rounded-lg border border-border bg-background shadow-sm p-8">
+        <div className="rounded-lg border border-gray-400 bg-background shadow-sm p-8">
           {/* Header */}
           <h1 className="text-2xl font-bold text-center mb-2">Create Account</h1>
           <p className="text-center text-foreground-muted mb-8">
@@ -106,7 +106,7 @@ export default function SignUpPage() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="input"
+                className="input border border-black"
                 placeholder="John Doe"
               />
               {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
@@ -120,7 +120,7 @@ export default function SignUpPage() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="input"
+                className="input border border-black"
                 placeholder="your@email.com"
               />
               {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
@@ -135,7 +135,7 @@ export default function SignUpPage() {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="input pr-10"
+                  className="input pr-10 border border-black"
                   placeholder="••••••••"
                 />
                 <button
@@ -159,7 +159,7 @@ export default function SignUpPage() {
                   name="confirmPassword"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className="input pr-10"
+                  className="input pr-10 border border-black"
                   placeholder="••••••••"
                 />
                 <button

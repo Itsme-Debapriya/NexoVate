@@ -1,38 +1,38 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import { Navigation } from "@/components/Navigation"
-import { OAuthButtons } from "@/components/OAuthButtons"
-import { useAuth } from "@/hooks/useAuth"
-import { validateEmail } from "@/lib/utils"
-import { Eye, EyeOff } from "lucide-react"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { Navigation } from "@/components/Navigation";
+import { OAuthButtons } from "@/components/OAuthButtons";
+import { useAuth } from "@/hooks/useAuth";
+import { validateEmail } from "@/lib/utils";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function SignInPage() {
-  const router = useRouter()
-  const { login } = useAuth()
-  const [email, setEmail] = useState("demo@NexoVate.com")
-  const [password, setPassword] = useState("password123")
-  const [showPassword, setShowPassword] = useState(false)
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
+  const router = useRouter();
+  const { login } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError("")
+    e.preventDefault();
+    setError("");
 
     if (!validateEmail(email)) {
-      setError("Please enter a valid email")
-      return
+      setError("Please enter a valid email");
+      return;
     }
 
     if (!password) {
-      setError("Password is required")
-      return
+      setError("Password is required");
+      return;
     }
 
-    setLoading(true)
+    setLoading(true);
 
     // Mock API call
     setTimeout(() => {
@@ -44,22 +44,24 @@ export default function SignInPage() {
         avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${email}`,
         bio: "Lifelong learner",
         enrolledCourses: [1, 2],
-      })
+      });
 
-      router.push("/dashboard")
-      setLoading(false)
-    }, 800)
-  }
+      router.push("/dashboard");
+      setLoading(false);
+    }, 800);
+  };
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
 
       <div className="max-w-md w-full mx-auto px-4 py-20">
-        <div className="rounded-lg border border-border bg-background shadow-sm p-8">
+        <div className="rounded-lg border border-gray-400 bg-background shadow-sm p-8">
           {/* Header */}
           <h1 className="text-2xl font-bold text-center mb-2">Welcome Back</h1>
-          <p className="text-center text-foreground-muted mb-8">Sign in to your account to continue learning</p>
+          <p className="text-center text-foreground-muted mb-8">
+            Sign in to your account to continue learning
+          </p>
 
           {/* Error Message */}
           {error && (
@@ -76,7 +78,7 @@ export default function SignInPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="input"
+                className="input border border-black"
                 placeholder="your@email.com"
               />
             </div>
@@ -88,7 +90,7 @@ export default function SignInPage() {
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="input pr-10"
+                  className="input pr-10 border border-black"
                   placeholder="••••••••"
                 />
                 <button
@@ -96,21 +98,29 @@ export default function SignInPage() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground-muted"
                 >
-                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  {showPassword ? (
+                    <EyeOff className="w-4 h-4" />
+                  ) : (
+                    <Eye className="w-4 h-4" />
+                  )}
                 </button>
               </div>
             </div>
 
-            <button type="submit" disabled={loading} className="btn-primary w-full">
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary w-full"
+            >
               {loading ? "Signing In..." : "Sign In"}
             </button>
           </form>
 
           {/* Divider */}
           <div className="flex items-center gap-3 mb-6">
-            <div className="flex-1 h-px bg-border" />
+            <div className="flex-1 h-px bg-border border border-gray-500" />
             <span className="text-xs text-foreground-muted">OR</span>
-            <div className="flex-1 h-px bg-border" />
+            <div className="flex-1 h-px bg-border border border-gray-500" />
           </div>
 
           {/* OAuth */}
@@ -119,23 +129,15 @@ export default function SignInPage() {
           {/* Footer */}
           <p className="text-center text-sm text-foreground-muted mt-6">
             Don't have an account?{" "}
-            <Link href="/signup" className="text-primary hover:underline font-medium">
+            <Link
+              href="/signup"
+              className="text-primary hover:underline font-medium"
+            >
               Sign up
             </Link>
           </p>
         </div>
-
-        {/* Demo Credentials */}
-        <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg text-sm">
-          <p className="font-medium text-blue-900 dark:text-blue-100 mb-2">Demo Credentials:</p>
-          <p className="text-blue-800 dark:text-blue-200">
-            Email: <span className="font-mono">demo@NexoVate.com</span>
-          </p>
-          <p className="text-blue-800 dark:text-blue-200">
-            Password: <span className="font-mono">password123</span>
-          </p>
-        </div>
       </div>
     </div>
-  )
+  );
 }

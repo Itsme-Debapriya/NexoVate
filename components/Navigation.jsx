@@ -6,19 +6,22 @@ import { Menu, X, Moon, Sun, User, LogOut, BookOpen } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useTheme } from "@/hooks/useTheme";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
   const { theme, toggleTheme } = useTheme();
 
+  const pathname = usePathname();
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const router = useRouter()
+  const router = useRouter();
   const handleLogout = () => {
     logout();
     setIsOpen(false);
-     router.push("/") 
+    router.push("/");
   };
 
   return (
@@ -44,14 +47,22 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-8">
             <Link
               href="/courses"
-              className="text-foreground hover:text-primary transition"
+              className={`relative text-foreground hover:text-primary transition pb-1 ${
+                pathname === "/courses"
+                  ? "text-primary font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary"
+                  : ""
+              }`}
             >
               Courses
             </Link>
             {isAuthenticated && (
               <Link
                 href="/instructor"
-                className="text-foreground hover:text-primary transition flex items-center gap-1"
+                className={`relative text-foreground hover:text-primary transition pb-1 flex items-center gap-1 ${
+                  pathname === "/instructor"
+                    ? "text-primary font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary"
+                    : ""
+                }`}
               >
                 <BookOpen className="w-4 h-4" />
                 Teach
@@ -59,13 +70,21 @@ export function Navigation() {
             )}
             <Link
               href="/about"
-              className="text-foreground hover:text-primary transition"
+              className={`relative text-foreground hover:text-primary transition pb-1 ${
+                pathname === "/about"
+                  ? "text-primary font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary"
+                  : ""
+              }`}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="text-foreground hover:text-primary transition"
+              className={`relative text-foreground hover:text-primary transition pb-1 ${
+                pathname === "/contact"
+                  ? "text-primary font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-primary"
+                  : ""
+              }`}
             >
               Contact
             </Link>
@@ -141,7 +160,7 @@ export function Navigation() {
             {isAuthenticated && (
               <Link
                 href="/instructor"
-                className="block px-4 py-2 hover:bg-background-secondary rounded-lg flex items-center gap-2"
+                className="block px-4 py-2 hover:bg-background-secondary rounded-lg items-center gap-2"
               >
                 <BookOpen className="w-4 h-4" />
                 Teach
