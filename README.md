@@ -8,6 +8,7 @@ This is a frontend-only implementation using mock data and localStorage for pers
   <img src="./public/Logo1.png" alt="Project Logo" width="200" />
 </p>
 
+## 🔗 **Live Demo:** [NexoVate – E-Learning Platform](https://nexovate-e-learning.vercel.app/)
 
 ## ✨ Features
 
