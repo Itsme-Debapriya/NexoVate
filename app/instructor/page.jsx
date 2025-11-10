@@ -134,7 +134,7 @@ export default function InstructorDashboard() {
                               : "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100"
                           }`}
                         >
-                          {course.isFree ? "Free" : `$${course.price}`}
+                          {course.isFree ? "Free" : `₹${course.price}`}
                         </span>
                       </div>
 

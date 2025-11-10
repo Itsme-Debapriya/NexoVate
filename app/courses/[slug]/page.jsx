@@ -108,7 +108,7 @@ export default function CourseDetailPage() {
                   className="w-full h-40 object-cover rounded-lg mb-4"
                 />
 
-                <div className="text-3xl font-bold mb-4">{course.isFree ? "Free" : `$${course.price}`}</div>
+                <div className="text-3xl font-bold mb-4">{course.isFree ? "Free" : `₹${course.price}`}</div>
 
                 {isEnrolled ? (
                   <div className="space-y-3">

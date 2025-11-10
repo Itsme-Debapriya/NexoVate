@@ -61,7 +61,7 @@ export function CourseCard({ course, isHorizontal = false }) {
               />
               <span className="text-xs text-foreground-muted">{course.instructor.name}</span>
             </div>
-            <span className="font-bold text-primary">{course.isFree ? "Free" : `$${course.price}`}</span>
+            <span className="font-bold text-primary">{course.isFree ? "Free" : `₹${course.price}`}</span>
           </div>
         </div>
       </div>

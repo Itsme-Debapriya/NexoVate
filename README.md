@@ -1,4 +1,4 @@
-s# NexoVate - E-Learning Platform Frontend
+# NexoVate - E-Learning Platform Frontend
 
 A production-quality, fully responsive e-learning platform frontend built with Next.js, Tailwind CSS, and React. This is a frontend-only implementation using mock data and localStorage for persistence.
 

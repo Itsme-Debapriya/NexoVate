@@ -283,7 +283,7 @@ export default function CreateCoursePage() {
                     <span className="font-medium">Lessons:</span> {lessons.length}
                   </p>
                   <p>
-                    <span className="font-medium">Price:</span> {formData.isFree ? "Free" : `$${formData.price}`}
+                    <span className="font-medium">Price:</span> {formData.isFree ? "Free" : `₹${formData.price}`}
                   </p>
                 </div>
               </div>

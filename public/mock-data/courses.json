@@ -71,7 +71,7 @@
       "students": 8234,
       "rating": 4.9,
       "reviewCount": 1829,
-      "price": 99.99,
+      "price": 599,
       "isFree": false,
       "lessons": [
         {
@@ -110,7 +110,7 @@
       "students": 15234,
       "rating": 4.7,
       "reviewCount": 2156,
-      "price": 69.99,
+      "price": 499,
       "isFree": false,
       "lessons": [
         {
@@ -188,7 +188,7 @@
       "students": 7654,
       "rating": 4.8,
       "reviewCount": 1876,
-      "price": 89.99,
+      "price": 799,
       "isFree": false,
       "lessons": [{
           "id": 1,
@@ -223,7 +223,7 @@
       "students": 6543,
       "rating": 4.6,
       "reviewCount": 842,
-      "price": 49.99,
+      "price": 999,
       "isFree": false,
       "lessons": [
         {
